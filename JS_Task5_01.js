@@ -1,42 +1,30 @@
-function calculator(firstNumber) {
-  var arithmetic = {};
-  return arithmetics = {
-               sum : function (b) {
-                       var result;
-                       result = firstNumber;
-                       result = result + b;
-                       firstNumber = result;
-                       return result;
-                     },
-               dif : function (b) {
-                       var result;
-                       result = firstNumber;
-                       result = result - b;
-                       firstNumber = result;
-                       return result;
-                     },
-               div : function (b) {
-                       var result;
-                       result = firstNumber;
-                       result = (b == 0) ? result : (result / b);
-                       firstNumber = result;
-                       return result;
-                     },
-               mul : function (b) {
-                       var result;
-                       result = firstNumber;
-                       result = result * b;
-                       firstNumber = result;
-                       return result;
-                     }
-         }; 
+function calculator() {
+  var currentState = 0;
+  return {
+            sum : function (arg) {
+                    return currentState + arg;
+                   },
+            dif : function (arg) {
+                    return currentState - arg;
+                   },
+            div : function (arg) {
+                    var result;
+                    result = currentState;
+                    result = (arg == 0) ? alert("На ноль делить нельзя") : (result / arg);
+                    currentState = result;
+                    return result;
+                  },
+            mul : function (arg) {
+                    return currentState * arg;
+                   },
+            getResult : function() {return currentState},
+            reset : function() { return currentState = 0}
+      }; 
 };
-var myCalculator = calculator(100),
-    m,n,x,
+var myCalculator = calculator(),
+    m,n,
     currentArith;
-    arr = [];
-x = 0;
-m = + prompt ('Put number of arithmetic \n 1.sum \n 2.dif \n 3.div \n 4.mul');
+m = + prompt ('Select an operation \n 1.Add \n 2.Subtract \n 3.Divide \n 4.Multiply \n 5.Get current result \n 6.Reset');
 switch (m) {
   case 1: 
        currentArith = 'sum';
@@ -50,10 +38,12 @@ switch (m) {
   case 4: 
        currentArith = 'mul';
        break;
+  case 5: 
+       currentArith = 'getResult';
+       break;
+  case 6:
+       currentArith = 'reset';
+       break;
 };
-n = + prompt ('Put number of arguments');
-for (var i = 0; i < n; i++) {
-  arr[i] = + prompt ('Put ' + (i + 1) + ' argument');
-  x = myCalculator[currentArith](arr[i])
-};
-alert (x);
+m <= 4 && (n = + prompt ('Put an argument'));
+alert (myCalculator[currentArith](n));
