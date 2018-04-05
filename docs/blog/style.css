@@ -1,0 +1,21 @@
+h1 {
+    font-family: Lucida Console
+}
+q {
+    font-family: Courier New
+}
+header p {
+    font-family: Verdana
+}
+.class1 {
+    font-family: Palatino Linotype
+}
+.class2 {
+    font-family: Impact
+}
+body {
+    background-image: url(http://bagiraclub.ru/images/bagiraclub/2017/02/cat-695x352.jpg); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+
