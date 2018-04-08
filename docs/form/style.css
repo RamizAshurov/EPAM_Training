@@ -1,0 +1,73 @@
+header {
+    border-bottom: 2px solid black;
+    width: 500px
+}
+h1 {margin-bottom: 0px}
+h3 {
+    color: tomato;
+    margin: 0px
+}
+forms > div {margin: 10px}
+label {
+    position: absolute;
+    font-weight: bold;
+    padding-top: 20px
+}
+input,textarea {
+    border: 1px solid;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-left: 100px;
+    padding-left: 10px;
+    outline: none
+}
+input:focus, textarea:focus {box-shadow: 0 0 10px black}
+input {
+    height: 30px;
+    width: 220px
+}
+.triangle {
+    margin: 0px 0px 0px 45px;
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border-top: 6px solid transparent;
+    border-right: 6px solid tomato;
+    border-bottom: 6px solid transparent;
+    border-left: 6px solid transparent;
+    position: relative;
+    top: 1px;
+    left: 4px
+}
+span {
+    background-color: tomato;
+    font-style: italic;
+    padding: 0px 5px
+}
+.triangle, span {display: none}
+input:focus + .triangle, input:focus ~ span {display: inline-block}
+input[type = "submit"] {
+    background-color: aliceblue;
+    border: 1px solid black;
+    font-weight: bold;
+    height: 30px;
+    width: 100px;
+    padding: 1px 8px
+}
+input[type = "submit"]:hover {cursor: pointer}
+.label {
+    color: grey;
+    position: absolute;
+    margin-left: 109px;
+    font-size: 10px;
+    margin-top: -43px;
+    opacity: 0;
+    transition-property: margin-top, opacity, color;
+    transition-duration: .15s;
+    transition-timing-function: linear
+}
+input:focus + .label {color: blue}
+input:valid + .label {
+    margin-top: -46px;
+    opacity: 1
+}

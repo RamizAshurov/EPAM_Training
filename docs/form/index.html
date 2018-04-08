@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Форма</title>
+        <link href = "style.css" rel = "stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Form here</h1>
+            <h3>* required fields</h3>
+        </header>
+        <forms>
+            <div>
+                <label for = "name-field">Name:</label>
+                <input type = "text" id = "name-field" required placeholder = "Name">
+                <div class = "label">Name</div>
+            </div>
+            <div>
+                <label for = "E-mail-field">E-mail:</label>
+                <input type = "text" id = "E-mail-field" placeholder = "Mail" required>
+                <div class = "label">Mail</div>
+                <div class = "triangle"></div>
+                <span>name@example.com</span>
+            </div>
+            <div>
+                <label for = "website-field">Website:</label>
+                <input type = "text" id = "website-field" placeholder = "Site" required>
+                <div class = "label">Site</div>
+                <div class = "triangle"></div>
+                <span>www. ... .com</span>
+            </div>
+            <div>
+                <label for = "message-field">Message:</label>
+                <textarea id = "message-field" cols = "30" rows = "5" placeholder = "Hobby"></textarea>
+            </div>
+            <input type = "submit" value = "Submit">
+        </forms>
+    </body>
+</html>
