@@ -7,7 +7,7 @@ h3 {
     color: tomato;
     margin: 0px
 }
-forms > div {margin: 10px}
+form > div {margin: 10px}
 label {
     position: absolute;
     font-weight: bold;
@@ -45,7 +45,7 @@ span {
     padding: 0px 5px
 }
 .triangle, span {display: none}
-input:focus + .triangle, input:focus ~ span {display: inline-block}
+input:focus ~ .triangle, input:focus ~ span {display: inline-block}
 input[type = "submit"] {
     background-color: aliceblue;
     border: 1px solid black;
