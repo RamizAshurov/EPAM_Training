@@ -1,6 +1,7 @@
 body {
     background-color: skyblue;
-    margin: 200px 400px;    
+    width: 800px;
+    margin: 0 auto
 }
 @keyframes elem-1 {
     15% {
