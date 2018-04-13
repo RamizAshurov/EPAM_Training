@@ -4,6 +4,7 @@ body {
     margin: 0 auto
 }
 @keyframes elem-1 {
+    0% {transform: rotate(0deg)}
     15% {
         transform-origin: bottom center;
         transform: scaleX(.4) scaleY(1.25)
