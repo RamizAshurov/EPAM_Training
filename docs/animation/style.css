@@ -12,7 +12,7 @@ body {
         transform: rotate(-360deg) translateY(-100px) scale(.4,1.25)
     }
     80% {transform: translateY(0px) scaleX(.4) scaleY(1.25)}
-    100% {transform: translateY(0px) slace(1,1)}
+    100% {transform: translateY(0px) scale(1,1)}
 }
 
 @keyframes elem-2 {
