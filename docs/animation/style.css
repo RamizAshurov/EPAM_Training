@@ -1,8 +1,10 @@
 body {
     background-color: skyblue;
-    margin: 200px 400px;    
+    width: 800px;
+    margin: 0 auto
 }
 @keyframes elem-1 {
+    0% {transform: rotate(0deg)}
     15% {
         transform-origin: bottom center;
         transform: scaleX(.4) scaleY(1.25)
@@ -12,7 +14,7 @@ body {
         transform: rotate(-360deg) translateY(-100px) scale(.4,1.25)
     }
     80% {transform: translateY(0px) scaleX(.4) scaleY(1.25)}
-    100% {transform: translateY(0px) slace(1,1)}
+    100% {transform: translateY(0px) scale(1,1)}
 }
 
 @keyframes elem-2 {
