@@ -1,0 +1,228 @@
+body {
+  margin: 0px;
+  padding: 0px
+}
+form, ul, ol {display: inline-block}
+form {margin: 0px}
+ul,ol {margin: 0px; padding: 0px}
+
+
+.header-top-panel {
+  background-color:  #eceef4;
+  width: 100%;
+}
+@media all and (max-width: 1024px) {
+  .header-top-panel {display: none}
+}
+.header-top-panel-wrapper {
+  width: 80%;
+  margin: 0 auto
+}
+.header-top-panel-wrapper > ul:first-child {float:left}
+.social-media {float: right}
+.header-top-panel-wrapper:after {
+  display: block;
+  content: "";
+  clear: both
+}
+.header-top-panel-wrapper > ul:first-child > ol {
+  position: relative;
+  background-color: white;
+  border-radius: 5px;
+  margin: 12px 10px 12px 0px;
+  padding: 7px 0px 0px 0px;
+  width: 99px;
+  height: 32px;
+  padding-left: 20px;
+  text-align: center;
+}
+.header-top-panel-wrapper > ul:first-child img {
+  position: absolute;
+  top: 8px;
+  left: 5px
+}
+.social-media ol {
+  border-left: 1px solid #dee0e6;
+  padding: 20px
+}
+.social-media ol:last-child {
+  border-right: 1px solid #dee0e6 
+}
+
+
+.header-logo {
+  width: 80%;
+  height: 120px;
+  margin: 0 auto;
+  padding: 60px 0px
+}
+@media all and (max-width: 1024px) {
+  .header-logo {display: none}
+}
+.header-logo::after {
+  display: block;
+  content: "";
+  clear: both
+}
+.header-logo p {
+  float: left;
+  background: url(logo.png) no-repeat;
+  width: 40%;
+  height: 100px;
+  margin: 0px;
+  padding-top: 23px;
+  font-family: OpenSans;
+  color: #3588c4;
+  font-size: 41px; 
+  font-weight: 400;
+  line-height: 34px; 
+  text-align: center;
+}
+.contacts {
+  float: right;
+  padding-top: 15px;
+  vertical-align: center
+}
+.contacts ol {
+  border-left: 1px solid #dee0e6;
+  padding: 0px 20px
+}
+.contacts ol:last-child {border-right: 1px solid #dee0e6}
+.hint {
+  position: absolute;
+  margin-top: -73px;
+  visibility: hidden;
+  margin-left: -64px;
+  font-family: OpenSans;
+  color: #6d6e71;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27px;
+  text-align: left;
+}
+img:hover + .hint {visibility: visible}
+
+
+.header-logo-tab {
+  display: none;
+  text-align: center
+}
+@media all and (max-width: 1024px) {
+  .header-logo-tab {
+    display: block
+  }
+}
+.header-logo-tab img {
+  float: left;
+  width: 60px;
+  height: 60px;
+  margin: 5px 0px
+}
+.header-logo-tab p {
+  background: url(logo.png) 50% no-repeat;
+  background-size: contain;
+  display: inline-block;
+  width: 20%;
+  font-family: OpenSans;
+  color: #3588c4;
+  font-size: 41px; 
+  font-weight: 400;
+  line-height: 34px; 
+  text-align: center;
+  margin: 20px
+}
+.header-logo-tab form {
+  background: url("icon (9).png") no-repeat;
+  background-size: contain;
+  float: right;
+  margin-top: 25px;
+  padding-left: 20px
+}
+
+
+
+
+.main-top-panel {
+  margin: 0px auto;
+  width: 80%
+}
+@media all and (max-width: 1024px) {
+  .main-top-panel {display: none}
+}
+.main-top-panel > ul {float: left}
+.main-top-panel > ul > ol {
+  border-left: 1px solid #dee0e6;
+  position: relative;
+  padding: 0px 20px;
+  font-family: OpenSans;
+  color:  #6d6e71;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 27px;
+  text-align: left
+}
+.main-top-panel > ul > ol:last-child {border-right: 1px solid #dee0e6}
+.main-top-panel > ul > ol:hover {color: skyblue}
+.main-top-panel > ul > ol:after {
+  border-top: 0px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid blue;
+  border-left: 10px solid transparent;
+  display: block;
+  visibility: hidden;
+  content: "";
+  width: 0px;
+  height: 0px;
+  margin: 0 auto
+}
+.main-top-panel > ul > ol:hover:after {visibility: visible}
+.main-top-panel > form {
+  background: url("icon (9).png") no-repeat;
+  background-size: contain;
+  float: right;
+  margin-top: 5px;
+  padding-left: 20px 
+}
+.main-top-panel:after {
+  display: block;
+  content: "";
+  clear: both
+}
+input {border: 0}
+.main-content {
+  background: url(Notebook_PNG_Vector_Clipart.png) no-repeat;
+  background-size: 100% 100%;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  width: 100%;
+  height: 855px
+}
+
+
+
+
+.footer-wrapper {
+  width: 80%;
+  margin: 0 auto
+}
+.footer-wrapper-content-1 {float: left}
+.footer-wrapper-content-2 {float: right}
+@media all and (max-width: 1024px) {
+  .footer-wrapper {width: 100%}
+  .footer-wrapper-content-1,
+  .footer-wrapper-content-2 {float: none; width: 100%; margin: 0 auto}
+}
+.footer-wrapper:after {
+  display: block;
+  content: "";
+  clear: both
+}
+.footer-wrapper > div {
+  box-sizing: border-box;
+  padding-left: 115px;
+  width: 45%;
+  position: relative
+}
+.footer-wrapper img {
+  position: absolute;
+  left: 0px
+}
