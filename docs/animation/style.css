@@ -1,45 +1,55 @@
 body {
     background-color: skyblue;
-    width: 800px;
-    margin: 0 auto
-}
-@keyframes elem-1 {
-    0% {transform: rotate(0deg)}
-    15% {
-        transform-origin: bottom center;
-        transform: scaleX(.4) scaleY(1.25)
-    }
-    40% {transform: translateY(-100px) scaleX(.4) scaleY(1.25)}
-    70% {transform-origin: center center;
-        transform: rotate(-360deg) translateY(-100px) scale(.4,1.25)
-    }
-    80% {transform: translateY(0px) scaleX(.4) scaleY(1.25)}
-    100% {transform: translateY(0px) scale(1,1)}
+    margin: 0;
+    padding: 0
 }
 
-@keyframes elem-2 {
-    15% {
-        transform-origin: bottom center;
-        transform: scaleX(.4)
-    }
-    40% {transform: scaleX(.25)}
-    70% {transform: scaleX(.25)}
-    80% {transform: scaleX(.4)}
-}
-div:first-child {
-    background-color: white;
-    width: 250px;
+.wrapper {
+    width: 300px;
     height: 80px;
-    animation: elem-1 2s linear
+    margin: 200px auto
 }
-div:last-child {
+.up-down {
+    animation: up-down 2s linear
+}
+.rotate {
+    transform: scale(1);
+    animation: rotate 2s linear 
+}
+.squeeze {
+    transform-origin: 50% 100%; 
+    animation: squeeze 2s ease-out
+}
+.square {
+    background-color: white;
+    width: 300px;
+    height: 80px;
+    margin: 0px auto;
+}
+.shadow {
     background-color: rgba(0,0,0,.2);
     border-radius: 50% 50%;
-    width: 280px;
+    width: 330px;
     height: 30px;
     position: absolute;
     margin-top: -13px;
-    margin-left: -15px;
+    margin-left: -14px;
     z-index: -1;
-    animation: elem-2 2s linear
+    animation: shadow 2s linear
+}
+@keyframes up-down {
+    15%,80% {transform: translateY(0px)}
+    50% {transform: translateY(-100px)}
+}
+@keyframes squeeze {
+    15%,82% {transform: scaleX(.4) scaleY(1.5)}
+}
+@keyframes rotate {
+    18% {transform: rotate(0deg)}
+    70%,100% {transform: rotate(360deg)}
+}
+@keyframes shadow {
+    15% {transform: scaleX(.4)}
+    40%,80% {transform: scaleX(.25)}
+    80% {transform: scaleX(.4)}
 }
