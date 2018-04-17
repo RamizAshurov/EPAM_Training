@@ -1,55 +1,65 @@
 body {
-    background-color: skyblue;
     margin: 0;
     padding: 0
 }
 
 .wrapper {
-    width: 300px;
-    height: 80px;
+    position: relative;
+    z-index: -2;
+    width: 400px;
+    height: 400px;
+    background-color: #3498db;
     margin: 200px auto
 }
-.up-down {
-    animation: up-down 2s linear
-}
-.rotate {
-    transform: scale(1);
-    animation: rotate 2s linear 
-}
+.up {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0px 0px -50px;
+    animation: up 2s cubic-bezier(.28,.71,.42,.98) infinite}
+.down {animation: down 2s cubic-bezier(.6,.4,.8,.84) infinite}
 .squeeze {
-    transform-origin: 50% 100%; 
-    animation: squeeze 2s ease-out
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    transform-origin: 50% 100%;
+    animation: squeeze 2s ease-out infinite
 }
 .square {
     background-color: white;
-    width: 300px;
-    height: 80px;
-    margin: 0px auto;
+    width: 100px;
+    height: 100px
 }
+.rotate {animation: rotate 2s linear infinite}
 .shadow {
     background-color: rgba(0,0,0,.2);
-    border-radius: 50% 50%;
-    width: 330px;
-    height: 30px;
+    border-radius: 50%;
+    width: 260px;
+    height: 20px;
     position: absolute;
-    margin-top: -13px;
-    margin-left: -14px;
+    margin-top: 240px;
+    margin-left: 70px;
     z-index: -1;
-    animation: shadow 2s linear
+    animation: shadow 2s linear infinite
 }
-@keyframes up-down {
-    15%,80% {transform: translateY(0px)}
-    50% {transform: translateY(-100px)}
+@keyframes up {
+    15% {transform: translateY(0px)}
+    50%,100% {transform: translateY(-100px)}
 }
-@keyframes squeeze {
-    15%,82% {transform: scaleX(.4) scaleY(1.5)}
+@keyframes down {
+    50% {transform: translateY(0px)}
+    85%,100% {transform: translateY(100px)}
+}
+@keyframes squeeze{
+    0%,100% {transform: scale(2.1,.7)}
+    20%,85% {transform: scale(1,1)}
 }
 @keyframes rotate {
     18% {transform: rotate(0deg)}
-    70%,100% {transform: rotate(360deg)}
+    70%,100% {transform: rotate(270deg)}
 }
 @keyframes shadow {
-    15% {transform: scaleX(.4)}
-    40%,80% {transform: scaleX(.25)}
-    80% {transform: scaleX(.4)}
+    20%,70% {transform: scaleX(.4)}
+    30%,57% {transform: scaleX(.27)}
+    80% {transform: scaleX(.5)}
 }
