@@ -239,6 +239,11 @@ body {
     margin-top: 150px;
     margin-left: 400px
   }
+.main-content .pics: after {
+    display: block;
+    content: "";
+    clear: both
+}
   @media all and (max-width: 1024px) {
     .pics {display: none}
     .text-1, .text-2 {padding-left: 0px}
