@@ -247,9 +247,7 @@ body {
   }
   .elem-1, .elem-2 {
     float: left;
-    position: relative;
-    width: 300px;
-    height: 210px
+    position: relative
   }
   .elem-1 > span {background-color: rgba(138, 202, 81)}
   .elem-2 > span {background-color: rgba(254, 235, 117)}
